@@ -51,20 +51,3 @@ super admin
 user name: 	admin@material.com
 
 password: 	****
-
-
-## Chrome jobs 
-#### 1 Sections: Check every day and end every week.
-    URL:        http://intraclub.net/autoCheckSection
-    Frequency:  00***
-    Timezone:   Europe/Paris
-
-#### 2 Story: Check every time and expire every day.
-    URL:        http://intraclub.net/autoCheckStory
-    Frequency:  0****
-    Timezone:   Europe/Paris
-    
-#### 3 Game: check every day and end every week
-    URL:        http://intraclub.net/autoCheckEndGame
-    Frequency:  00***
-    Timezone:   Europe/Paris

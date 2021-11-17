@@ -17,6 +17,6 @@ Route::redirect('/', '/login');
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::resource('home', 'HomeController');
-	Route::resource('user', 'UserController');
+	Route::resource('home', 'Basic\HomeController');
+	Route::resource('user', 'Basic\UserController');
 });

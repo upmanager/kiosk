@@ -34,7 +34,7 @@ class LoginController extends Controller
         if ($this->guard()->validate($this->credentials($request))) {
             $user = $this->guard()->getLastAttempted();
 
-            if (($user->role==1 || $user->role==2) && $user->active && $this->attemptLogin($request)) {
+            if ($user->active==1 && $this->attemptLogin($request)) {
                 return $this->sendLoginResponse($request);
             } else {
                 $this->incrementLoginAttempts($request);
