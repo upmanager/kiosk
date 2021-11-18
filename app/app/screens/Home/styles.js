@@ -30,6 +30,7 @@ export default StyleSheet.create({
   },
   prodImage: {
     width: "70%",
+    height:100,
   },
   prodText: {
     padding: 5,

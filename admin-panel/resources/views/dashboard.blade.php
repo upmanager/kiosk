@@ -10,10 +10,7 @@
                 <i class="material-icons">person</i>
               </div>
               <p class="card-category">Admin</p>
-              <h3 class="card-title">
-               76
-                <!-- <small>GB</small> -->
-              </h3>
+              <h3 class="card-title">76<!-- <small>GB</small> --></h3>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -28,9 +25,7 @@
                 <i class="material-icons">supervised_user_circle</i>
               </div>
               <p class="card-category">total User</p>
-              <h3 class="card-title">
-                12
-              </h3>
+              <h3 class="card-title">12</h3>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -44,9 +39,7 @@
                 <i class="material-icons">mail_outline</i>
               </div>
               <p class="card-category">Total News</p>
-              <h3 class="card-title">
-             56
-              </h3>
+              <h3 class="card-title">56</h3>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -60,9 +53,7 @@
                 <i class="material-icons">group</i>
               </div>
               <p class="card-category">Total Team</p>
-              <h3 class="card-title">
-               78
-              </h3>
+              <h3 class="card-title">78</h3>
             </div>
             <div class="card-footer">
               <div class="stats">

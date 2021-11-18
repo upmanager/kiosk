@@ -1,9 +1,8 @@
-import { LOADING, SELECT, UNSELECT, CLEAR, GETCATEGORIS, GETPRODUCTS } from "@constants";
+import { LOADING, SELECT, UNSELECT, CLEAR, GETCATEGORIS } from "@constants";
 const initialState = {
     loading: false,
     selectedList: [],
     categories: [],
-    products: []
 };
 
 export default (state = initialState, action) => {
@@ -30,8 +29,6 @@ export default (state = initialState, action) => {
             return { ...state, selectedList };
         case GETCATEGORIS:
             return { ...state, categories: action.data };
-        case GETPRODUCTS:
-            return { ...state, products: action.data };
         default:
             return state;
     }

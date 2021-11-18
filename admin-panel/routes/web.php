@@ -19,4 +19,5 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('home', 'Basic\HomeController');
 	Route::resource('user', 'Basic\UserController');
+	Route::resource('product', 'Basic\ProductController');
 });

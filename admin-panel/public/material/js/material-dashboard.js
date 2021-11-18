@@ -453,7 +453,7 @@ md = {
 
       nav_content = '<ul class="nav navbar-nav nav-mobile-menu">' + nav_content + '</ul>';
 
-      navbar_form = $('nav').find('.navbar-form').get(0).outerHTML;
+      navbar_form = $('nav').find('.navbar-form').get(0)?.outerHTML;
 
       $sidebar_nav = $sidebar_wrapper.find(' > .nav');
 

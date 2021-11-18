@@ -1,7 +1,7 @@
 import * as reduxActions from "@actions";
-import { Text } from "@components";
+import { Text, Image } from "@components";
 import React, { Component } from 'react';
-import { View, FlatList, Image, SafeAreaView } from 'react-native';
+import { View, FlatList, SafeAreaView } from 'react-native';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { connect } from 'react-redux';
 import styles from "./styles";
@@ -24,7 +24,6 @@ export class index extends Component {
 
     componentDidMount() {
         this.props.getCategories();
-        this.props.getProducts();
     }
     get colNums() {
         return this._category?.cols || 4;
@@ -39,10 +38,9 @@ export class index extends Component {
     }
     get _productsData() {
         try {
-            const { app: { products } } = this.props;
-            var data = products.filter(item => item.categoryid == this._category.id);
+            ;
+            var data = this._category.products;
             var arr = data.length % this.colNums == 0 ? [] : (new Array(this.colNums - data.length % this.colNums).fill({ id: -1 }));
-
             data = [...data, ...arr];
             return data;
         } catch (err) {
@@ -143,10 +141,14 @@ export class index extends Component {
                     <View style={styles.largeCategoreis}>
                         <View style={styles.category}>
                             <Text header dangerColor bold>{`Total: ${this._totalPrice}$`}</Text>
-                            <Text header primaryColor bold>{this._category.title || this._category.name}</Text>
-                            {this._category.subtitle &&
-                                <Text title3 grayColor bold>{this._category.subtitle}</Text>
-                            }
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 10 }}>
+                                <Image source={this._category.image} style={{ width: 80, height: 80, borderRadius: 20 }} resizeMode={'cover'} />
+                                <View style={{ marginLeft: 20 }}>
+                                    <Text header primaryColor bold>{this._category.title || this._category.name}</Text>
+                                    {this._category.subtitle &&
+                                        <Text title3 grayColor bold>{this._category.subtitle}</Text>
+                                    }</View>
+                            </View>
                         </View>
                         <View style={styles.Hline} />
                         <FlatList

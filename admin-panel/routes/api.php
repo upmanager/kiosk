@@ -16,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 
 // access without login
-Route::post('register', 'API\UserController@register');
-Route::post('login', 'API\UserController@login');
+// Route::post('register', 'API\UserController@register');
+// Route::post('login', 'API\UserController@login');
+Route::get('categories', 'API\BaseController@index');
 
-Route::group(['middleware' => 'auth:api'], function () {
+// Route::group(['middleware' => 'auth:api'], function () {
    
-});
+// });

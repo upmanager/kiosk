@@ -772,3 +772,7 @@
     transform: none !important;
     margin: 0px !important;
 }
+.selected-item {
+    background-color: #0274d8a6 !important;
+    color: white;
+}
